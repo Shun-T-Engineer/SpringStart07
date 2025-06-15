@@ -14,7 +14,7 @@ public class ParamController {
 	}
 	
 	@GetMapping("/post-param")
-	public String postParam(@RequestParam String greeting, Model model) {
+	public String postParam(@RequestParam(name = "g") String greeting, Model model) {
 		model.addAttribute("mGreeting", greeting);
 		return "display";
 	}
